@@ -1,4 +1,4 @@
-name: pure-padavanonly-360t7-24.10-6.6
+name: MT7981-padavanonly-24.10-6.6
 
 on:
   repository_dispatch:
@@ -14,7 +14,7 @@ env:
   REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-6.6
   REPO_BRANCH: openwrt-24.10-6.6
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: 6.6_pure.config
+  CONFIG_FILE: Filogic.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   UPLOAD_FIRMWARE: true
@@ -157,16 +157,16 @@ jobs:
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
          time=$(date +%Y.%m.%d)
-         release_tag="360T7-ImmortalWrt-2410-$time"
-         release_name="360T7-ImmortalWrt-2410-$time"
+         release_tag="MT7981-ImmortalWrt-2410-$time"
+         release_name="MT7981-ImmortalWrt-2410-$time"
 
          cat > release.txt <<EOF
          ## 📦 固件信息
-         - 🎯 设备：360T7 (MT7981)
+         - 🎯 设备：MT7981
          - 📅 构建：$time
-         - 🌐 网关：192.168.77.1
+         - 🌐 网关：192.168.66.1
          - 🔑 密码：*空*
-         - 🔧 组件：Nikki
+         - 🔧 组件：
          
          > ⚠️ 首次登录请修改默认密码
          EOF
