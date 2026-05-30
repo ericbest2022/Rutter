@@ -1,6 +1,11 @@
-# Filogic-ImmortalWrt24.10-padavanonly
+# immortalWrt 25.12
+- Cudy TR3000
+- 360T7
+- xiaomi AX3000T
+- R3G
 
-# model 
+
+# padavanonly 24.10
 - Cudy TR3000
 - 360T7
 - xiaomi AX3000T
@@ -10,6 +15,9 @@
 
 # Version
 
+	REPO_URL: https://github.com/immortalwrt/immortalwrt.git
+	REPO_BRANCH: openwrt-25.12
+  
 	REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-6.6
 	REPO_BRANCH: openwrt-24.10-6.6
   
