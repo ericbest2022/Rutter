@@ -182,7 +182,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        time=$(date +%Y.%m.%d)
+        time=$(date +"%Y.%m.%d-%H%M")
         release_tag="Filogic-immortalWrt-padavanonly-2410-$time"
         echo "release_tag=$release_tag" >> $GITHUB_OUTPUT
         touch release.txt
