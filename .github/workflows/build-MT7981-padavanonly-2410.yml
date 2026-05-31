@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: MT7981-padavanonly-24.10-6.6
+name: build-MT7981-padavanonly-24.10-6.6
 
 permissions: write-all
 #开启写权限，防止无法上传到release
