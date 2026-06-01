@@ -16,8 +16,8 @@ permissions: write-all
 on:
   repository_dispatch:
   workflow_dispatch:
-  #自动编译：每周一早上2点（中国时间）
-  #UTC 周日 18:00 = 中国周一 02:00
+  #自动编译：每周一早上8点（中国时间）
+  #UTC 周日 00:00 = 中国周一 08:00
   schedule:
     - cron: 0 0 * * 1
 
