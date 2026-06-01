@@ -14,17 +14,12 @@ permissions: write-all
 #开启写权限，防止无法上传到release
 
 on:
+  repository_dispatch:
+  workflow_dispatch:
   #自动编译：每周一早上11点（中国时间）
   #UTC 周日 3:00 = 中国周一 11:00
   schedule:
     - cron: 0 3 * * 1
-  #手动编译
-  workflow_dispatch:
-#    inputs:
-#      ssh:
-#        description: 'SSH connection to Actions'
-#        required: false
-#        default: 'false'
 
 # ==================== 环境变量配置 ====================
 env:
