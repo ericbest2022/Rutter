@@ -18,6 +18,13 @@ on:
   #UTC 周日 7:00 = 中国周一 15:00
   schedule:
     - cron: 0 7 * * 1
+  #手动编译
+  workflow_dispatch:
+    inputs:
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'false'
 
 # ==================== 环境变量配置 ====================
 env:
