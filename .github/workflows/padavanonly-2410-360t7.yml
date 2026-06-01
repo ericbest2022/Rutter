@@ -14,11 +14,11 @@ permissions: write-all
 #开启写权限，防止无法上传到release
 
 on:
-  repository_dispatch:
-  workflow_dispatch:
   #自动编译：UTC 周日 00:00 = 中国周二 08:00
   schedule:
     - cron: 0 0 * * 2
+  #手动编译
+  workflow_dispatch:
 
 # ==================== 环境变量配置 ====================
 env:
