@@ -16,7 +16,7 @@ permissions: write-all
 on:
   #自动编译：UTC 00:00 = 中国 08:00，分,时,日,月,周
   schedule:
-    - cron: 0 0 3,13,23 * *
+    - cron: 8 0 3,13,23 * *
   #手动编译
   workflow_dispatch:
 
