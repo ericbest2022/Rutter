@@ -147,13 +147,9 @@ jobs:
     # [12] 整理固件文件
     - name: 整理固件文件
       id: organize
-      if: steps.compile.outputs.status == 'success' && !cancelled()
+      if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
       run: |
         cd openwrt/bin/targets/*/*
-        rm -rf *uboot.fip *gpt.bin *preloader.bin *recovery.itb *kernel.bin *factory.bin
-        rm -rf *.buildinfo
-        rm -rf *.json
-        rm -rf *.manifest
         rm -rf packages
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "status=success" >> $GITHUB_OUTPUT
