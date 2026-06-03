@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: immortalWrt2512-R3G
+name: R3G-immortalWrt2512
 
 permissions: write-all
 #开启写权限，防止无法上传到release
