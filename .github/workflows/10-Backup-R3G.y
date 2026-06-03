@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: backup-R3G-01
+name: 10-backup-R3G
 
 permissions: write-all
 #开启写权限，防止无法上传到release
