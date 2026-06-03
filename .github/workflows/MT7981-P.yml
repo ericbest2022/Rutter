@@ -24,7 +24,7 @@ env:
   REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-6.6
   REPO_BRANCH: openwrt-24.10-6.6
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: MT7981A.config
+  CONFIG_FILE: MT7981.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   UPLOAD_FIRMWARE: true
@@ -119,16 +119,22 @@ jobs:
 
     - name: 导入补丁和配置 & 执行脚本
       run: |
-        [ -d files ] && mv files openwrt/files || echo "files not found"
-        [ -f $PLATFORM_FILE ] && cat $PLATFORM_FILE >> openwrt/.config
-        [ -f $CONFIG_FILE ] && cat $CONFIG_FILE >> openwrt/.config
-        [ -f $CONFIG_5G ] && cat $CONFIG_5G >> openwrt/.config
-        chmod +x $RUST_SH && $RUST_SH
+        [ -e files ] && mv files openwrt/files
+        [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
+        chmod +x $DIY_P2_SH
         cd openwrt
-        chmod +x $GITHUB_WORKSPACE/$SETTINGS_SH && $GITHUB_WORKSPACE/$SETTINGS_SH
-        chmod +x $GITHUB_WORKSPACE/$PACKAGES_SH && $GITHUB_WORKSPACE/$PACKAGES_SH
-        chmod +x $GITHUB_WORKSPACE/$INSTALL5G_SH && $GITHUB_WORKSPACE/$INSTALL5G_SH
-        chmod +x $GITHUB_WORKSPACE/$CLASH_CORE_SH && $GITHUB_WORKSPACE/$CLASH_CORE_SH
+        $GITHUB_WORKSPACE/$DIY_P2_SH
+
+#        [ -d files ] && mv files openwrt/files || echo "files not found"
+#        [ -f $PLATFORM_FILE ] && cat $PLATFORM_FILE >> openwrt/.config
+#        [ -f $CONFIG_FILE ] && cat $CONFIG_FILE >> openwrt/.config
+#        [ -f $CONFIG_5G ] && cat $CONFIG_5G >> openwrt/.config
+#        chmod +x $RUST_SH && $RUST_SH
+#        cd openwrt
+#        chmod +x $GITHUB_WORKSPACE/$SETTINGS_SH && $GITHUB_WORKSPACE/$SETTINGS_SH
+#        chmod +x $GITHUB_WORKSPACE/$PACKAGES_SH && $GITHUB_WORKSPACE/$PACKAGES_SH
+#        chmod +x $GITHUB_WORKSPACE/$INSTALL5G_SH && $GITHUB_WORKSPACE/$INSTALL5G_SH
+#        chmod +x $GITHUB_WORKSPACE/$CLASH_CORE_SH && $GITHUB_WORKSPACE/$CLASH_CORE_SH
 
     - name: 下载文件
       run: |
