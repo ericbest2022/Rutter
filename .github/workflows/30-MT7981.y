@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: MT7981-P
+name: 30-MT7981
 
 permissions: write-all
 #开启写权限，防止无法上传到release
