@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 10-filogic-padavanonly2410
+name: 10-MT7981-padavanonly2410
 
 permissions: write-all
 #开启写权限，防止无法上传到release
