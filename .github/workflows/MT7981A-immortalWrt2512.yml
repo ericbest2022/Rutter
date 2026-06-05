@@ -22,8 +22,8 @@ on:
         # 分,时,日,月,周。每周 四 20时执行一次 (UTC时间)
   
 env:
-  REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-6.6
-  REPO_BRANCH: openwrt-24.10-6.6
+  REPO_URL: https://github.com/immortalwrt/immortalwrt.git
+  REPO_BRANCH: openwrt-25.12
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: MT7981A.config
   DIY_P1_SH: diy-part1.sh
@@ -196,7 +196,7 @@ jobs:
       run: |
         VERSION1="${REPO_BRANCH#*-}"
         echo -e "🎉 MTK MT7981A 平台\n✅ ${VERSION1} 源码\n❗️ ip地址 : 192.168.66.1" >> release.txt
-        echo "release_tag=$(date +"%Y.%m.%d-${VERSION1}_MT7981A_padavanonly")" >> $GITHUB_OUTPUT
+        echo "release_tag=$(date +"%Y.%m.%d-${VERSION1}_MT7981A_immortalWrt2512")" >> $GITHUB_OUTPUT
         echo "status=success" >> $GITHUB_OUTPUT
 
     - name: 上传固件到发布
