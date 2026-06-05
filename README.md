@@ -97,5 +97,5 @@ Build OpenWrt using GitHub Actions
 
 ## License
 
-[MIT](https://github.com/Qs315490/RedMi-AC2100-OpenWrt/blob/main/LICENSE) 漏 [**P3TERX**](https://p3terx.com)
+[MIT](https://github.com/Qs315490/RedMi-AC2100-OpenWrt/blob/main/LICENSE) © [**P3TERX**](https://p3terx.com)
 
