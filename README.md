@@ -80,10 +80,6 @@ Build OpenWrt using GitHub Actions
 - [OpenWrt](https://github.com/openwrt/openwrt)
 - [Immortalwrt](https://github.com/immortalwrt/immortalwrt)
 - [padavanonly]( https://github.com/padavanonly/immortalwrt-mt798x-6.6)
-- [XiaoBinin](https://github.com/XiaoBinin)
-- [sagehou](https://github.com/sagehou/360T7)
-- [hjiachuang](https://github.com/hjiachuang)
-- [bnaand](https://github.com/bnaand)
 
 ## License
 
