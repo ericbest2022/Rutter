@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: MT7981A-Padavanonly2410
+name: MT7981-immortalWrt
 
 permissions: write-all
 #开启写权限，防止无法上传到release
@@ -18,14 +18,14 @@ on:
   workflow_dispatch:
     #自动编译：UTC 00:00 = 中国 08:00，分,时,日,月,周
 #  schedule:
-#    - cron: 8 0 8,18,28 * *
+#    - cron: 8 0 5,15,25 * *
         # 分,时,日,月,周。每周 四 20时执行一次 (UTC时间)
   
 env:
-  REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-6.6
-  REPO_BRANCH: openwrt-24.10-6.6
+  REPO_URL: https://github.com/immortalwrt/immortalwrt.git
+  REPO_BRANCH: openwrt-25.12
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: MT7981A.config
+  CONFIG_FILE: MT7981.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   UPLOAD_FIRMWARE: true
@@ -195,7 +195,7 @@ jobs:
       if: env.UPLOAD_RELEASE == 'true' && steps.compile.outputs.status == 'success' && !cancelled()
       run: |
         VERSION1="${REPO_BRANCH#*-}"
-        echo "release_tag=$(date +"%Y.%m.%d-%H%M-${VERSION1}_MT7981_padavanonly")" >> $GITHUB_OUTPUT
+        echo "release_tag=$(date +"%Y.%m.%d-%H%M-${VERSION1}_MT7981_immortalWrt")" >> $GITHUB_OUTPUT
         echo "status=success" >> $GITHUB_OUTPUT
 
         cat > release.txt << EOF
