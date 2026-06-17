@@ -201,7 +201,7 @@ jobs:
         retain_days: 1
         keep_minimum_runs: 10
 
-#    - name: Remove old Releases  # 删除旧的发布版本
+    - name: Remove old Releases  # 删除旧的发布版本
       uses: dev-drprasad/delete-older-releases@v0.2.1
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       with:
