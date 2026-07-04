@@ -1,4 +1,4 @@
-# immortalWrt 25.12
+# immortalWrt
 - Cudy TR3000
 - 360T7
 - R3G
