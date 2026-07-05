@@ -23,8 +23,13 @@ echo "src-git nikki https://github.com/nikkinikki-org/OpenWrt-nikki.git;main" >>
 
 
 # 添加 passwall2 插件及依赖包
-git clone https://github.com/xiaorouji/openwrt-passwall2.git package/luci-app-passwall2
-git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/openwrt-passwall-packages
+git clone https://github.com/Openwrt-Passwall/openwrt-passwall2.git package/luci-app-passwall2
+git clone https://github.com/Openwrt-Passwall/openwrt-passwall.git package/luci-app-passwall
+git clone https://github.com/Openwrt-Passwall/openwrt-passwall-packages.git package/openwrt-passwall-packages
+
+# git clone https://github.com/xiaorouji/openwrt-passwall2.git package/luci-app-passwall2
+# git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/openwrt-passwall-packages
+
 
 # 应用过滤
 git clone -b v6.1.8  https://github.com/destan19/OpenAppFilter package/OpenAppFilter
