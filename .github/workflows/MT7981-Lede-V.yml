@@ -39,8 +39,7 @@ jobs:
 
   name: Build OpenWrt Firmware
   
-  runs-on: ubuntu-last
-
+  runs-on: ubuntu-latest
     steps:
     - name: 检查代码
       uses: actions/checkout@main
