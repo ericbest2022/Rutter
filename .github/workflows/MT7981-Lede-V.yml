@@ -34,11 +34,7 @@ env:
   TZ: Asia/Shanghai
 
 jobs:
-
- build_openwrt:
-
-  name: Build OpenWrt Firmware
-  
+ build:  
   runs-on: ubuntu-latest
     steps:
     - name: 检查代码
