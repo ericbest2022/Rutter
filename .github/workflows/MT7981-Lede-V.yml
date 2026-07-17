@@ -34,8 +34,9 @@ env:
   TZ: Asia/Shanghai
 
 jobs:
- build:  
-  runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
+
     steps:
     - name: 检查代码
       uses: actions/checkout@main
