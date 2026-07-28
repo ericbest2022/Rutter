@@ -22,7 +22,7 @@ on:
         # 分,时,日,月,周。每周 四 20时执行一次 (UTC时间)
   
 env:
-  REPO_URL: https://github.com/immortalwrt/immortalwrt
+  REPO_URL: https://github.com/immortalwrt/immortalwrt.git
   REPO_BRANCH: master
 #  TAG: v25.12.0
   FEEDS_CONF: feeds.conf.default
