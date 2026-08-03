@@ -23,7 +23,7 @@ on:
   
 env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt.git
-  REPO_BRANCH: master
+  REPO_BRANCH: openwrt-25.12
 #  TAG: v25.12.0
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: MT7981-im.config
