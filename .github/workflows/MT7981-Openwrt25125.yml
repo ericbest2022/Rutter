@@ -10,7 +10,7 @@
 # See /LICENSE for more information.
 #
 
-name: MT7981-Openwrt25125-VPN
+name: MT7981-Openwrt25125
 
 on:
   workflow_dispatch:
