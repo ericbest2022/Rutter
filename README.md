@@ -79,7 +79,8 @@ Build OpenWrt using GitHub Actions
 - [GitHub Actions](https://github.com/features/actions)
 - [OpenWrt](https://github.com/openwrt/openwrt)
 - [Immortalwrt](https://github.com/immortalwrt/immortalwrt)
-- [padavanonly]( https://github.com/padavanonly/immortalwrt-mt798x-6.6)
+- [padavanonly](https://github.com/padavanonly/immortalwrt-mt798x-6.6)
+- [gpzy1988](https://github.com/gpzy1988/Cudy-TR3000-128M-512MB-U-Boot-bl2-ImmortalWrt-mt798x-6.6.git)
 
 ## License
 
