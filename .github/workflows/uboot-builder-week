@@ -1,4 +1,4 @@
-name: 798x-UBOOT-weekday
+name: 798x-UBOOT-week
 
 on:
   workflow_dispatch:
